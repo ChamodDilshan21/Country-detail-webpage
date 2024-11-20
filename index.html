@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Countries</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Monteserrat font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900c"
+        rel="stylesheet" />
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boostrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- AOS css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <section class="container search-box">
+        <h3 class="h3">
+            Enter a Country Name to Find Details
+        </h3>
+        <input type="text" id="searchInput" placeholder="Search Country">
+    </section>
+
+    <div class="container">
+        <div id="row" class="row row-cols-1 row-cols-md-4 g-5">
+            <div class="col">
+                <div class="card">
+                    <div></div>
+                    <img src="${element.flags.svg}" class="card-img-top" alt="${element.flags.alt}">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">${element.name.official}</h5>
+                        <p class="card-text"><span class="fw-bold">Capital : </span> ${element.capital}</p>
+                        <p class="card-text"><span class="fw-bold">Region : </span> ${element.region}</p>
+                        <p class="card-text"><span class="fw-bold">Popualtion : </span> ${numberFormat(element.population)}</p>
+                        <button type="button" class="btn learn-more" onclick="window.open('${element.maps.googleMaps}', '_blank')">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Google Map</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- boostrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

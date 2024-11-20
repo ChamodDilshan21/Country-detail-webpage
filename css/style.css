@@ -1,0 +1,229 @@
+*{
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card-img-top{
+    max-height: 200px;
+}
+
+.card-body,
+.card{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-body:hover{
+    opacity: 1;
+}
+
+.search-box{
+    max-width: 600px !important;
+    background-color: #fff;
+    margin: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.search-box .h3{
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#searchInput{
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+@media screen and (max-width:992px) {
+    .search-box .h3{
+        width: auto;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    #searchInput{
+        width: auto;
+        margin: 0px 20px 20px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container{
+        max-width: 540px !important;
+        padding-top: 40px;
+    }
+    .row{
+        display: block !important;
+    }
+    .col{
+        width: 90% !important;
+    }
+}
+
+/* card hover effect */
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: all 0.5s ease;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden
+}
+
+.card .backgroundEffect {
+    bottom: 0;
+    height: 0px;
+    width: 100%
+}
+
+.card:hover {
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+
+.card:hover .backgroundEffect {
+    bottom: 0;
+    height: 320px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: #1b9ce3;
+    animation: popBackground 0.3s ease-in
+}
+
+@keyframes popBackground {
+    0% {
+        height: 20px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%
+    }
+
+    50% {
+        height: 80px;
+        border-top-left-radius: 75%;
+        border-top-right-radius: 75%
+    }
+
+    75% {
+        height: 160px;
+        border-top-left-radius: 85%;
+        border-top-right-radius: 85%
+    }
+
+    100% {
+        height: 320px;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%
+    }
+}
+
+/* button hover effect */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  button.learn-more {
+    width: 14rem;
+    height: auto;
+  }
+  
+  button.learn-more .circle {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: black; /* Replace $black with actual color value */
+    border-radius: 1.625rem;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  }
+  
+  button.learn-more .circle .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: white; /* Replace $white with actual color value */
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  }
+  
+  button.learn-more .circle .icon.arrow {
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  }
+  
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  
+  button.learn-more .button-text {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: black; /* Replace $black with actual color value */
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    text-decoration: underline;
+  }
+  
+  button:hover .circle {
+    width: 100%;
+  }
+  
+  button:hover .circle .icon.arrow {
+    background: white; /* Replace $white with actual color value */
+    transform: translate(1rem, 0);
+  }
+  
+  button:hover .button-text {
+    color: white; /* Replace $white with actual color value */
+    text-decoration: none;
+  }
+
+
+/* Hide in search */
+
+  .col.hidden {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    border: none; /* Hide border during collapse */
+  }
